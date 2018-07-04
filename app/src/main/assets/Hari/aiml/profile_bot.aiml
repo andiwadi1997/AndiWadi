@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+
+
+    <category>
+        <pattern> I LIKE * </pattern>
+        <template>
+         I like <star/> too.
+        </template>
+    </category>
+
+    <category>
+            <pattern> A * IS A * </pattern>
+            <template>
+             When a <star index="1"/> is not a <star index="2"/>?
+            </template>
+        </category>
+
+
+    <category>
+         <pattern> WHO IS ALAN TURING? </pattern>
+         <template>
+             Alan Turing was a British mathematician, cryptographer,
+             and computer scientist often credited as
+             the founder of modern Computer Science.
+         </template>
+     </category>
+
+     <category>
+         <pattern> WHO IS ALBERT SABIN? </pattern>
+         <template>
+             Albert Sabin was the researcher who developed
+             the vaccine that is the main defense against polio.
+         </template>
+    </category>
+
+     <category>
+         <pattern> DO YOU KNOW WHO * IS? </pattern>
+         <template>
+             <srai> WHO IS <star/> </srai>
+         </template>
+     </category>
+
+
+    <category>
+         <pattern> BYE </patter>
+         <template> Goodbye friend! </template>
+    </category>
+
+    <category>
+         <pattern> BYE * </pattern>
+         <template> <srai> BYE </srai> </template>
+    </category>
+
+
+    <category>
+         <pattern> INDUSTRY </pattern>
+         <template>
+         It is a development center.
+         </template>
+   </category>
+
+   <category>
+     <pattern> FACTORY </pattern>
+     <template>
+         <srai> INDUSTRY </srai>
+     </template>
+   </category>
+
+
+
+
+
+   <category>
+        <pattern> FAMILY </pattern>
+        <template>
+             Family is an important institution.
+        </template>
+  </category>
+
+  <category>
+         <pattern> _ FAMILY </pattern>
+         <template>
+             <srai> FAMILY </srai>
+         </template>
+  </category>
+
+ <category>
+        <pattern> FAMILY * </pattern>
+        <template>
+             <srai> FAMILY </srai>
+        </template>
+ </category>
+
+ <category>
+        <pattern> _ FAMILY * </pattern>
+        <template>
+             <srai> FAMILY </srai>
+       </template>
+ </category>
+
+
+
+   <category>
+         <pattern> HI </pattern>
+         <template>
+            <random>
+                <li> Hi! Nice to meet you </li>
+                <li> Hello, How are you? </li>
+                <li> Hello! </li>
+           </random>
+         </template>
+    </category>
+
+
+
+
+ <category>
+         <pattern> MY NAME IS * </pattern>
+         <template>
+          Hello <set name="nameUser"> <star/> </set>
+         </template>
+ </category>
+
+
+
+
+<category>
+    <pattern> GOOD NIGHT </pattern>
+    <template>
+     Good night <get name="nameUser"/>
+    </template>
+ </category>
+
+
+
+ <category>
+     <pattern> MAKE SOME QUESTION </pattern>
+        <template>
+        Do you like movies?
+         </template>
+  </category>
+
+  <category>
+        <pattern> YES </pattern>
+         <that> Do you like movies? </that>
+         <template>
+         Nice, I like movies too.
+         </template>
+  </category>
+
+  <category>
+         <pattern> NO </pattern>
+         <that> Do you like movies? </that>
+         <template>
+          OK. But I like movies.
+         </template>
+  </category>
+
+
+
+  <category>
+       <pattern> LET TALK ABOUT FLOWERS. </pattern>
+       <template>
+       Yes <set name="topic">flowers</set>
+       </template>
+   </category>
+
+   <topic name="flowers">
+       <category>
+           <pattern> * </pattern>
+           <template>
+           Flowers have a nice smell.
+           </template>
+       </category>
+
+       <category>
+           <pattern> I LIKE IT SO MUCH! </pattern>
+           <template>
+           I like flowers too.
+           </template>
+           </category>
+   </topic>
+
+
+<category>
+     <pattern> MY NAME IS * </pattern>
+     <template>
+     <think> <set name=”nameUser”> * </set> </think>
+     </template>
+ </category>
+
+
+ <category>
+      <pattern> HOW ARE YOU? </pattern>
+      <template>
+      <condition name=”state” value=”happy”>
+      It is nice being happy.
+      </condition>
+      <condition name=”state” value=”sad”>
+      Being sad is not nice.
+      </condition>
+      </template>
+ </category>
+
+
+
+ <category>
+      <pattern> BOT’S PROPERTIES </pattern>
+      <template>
+          <bot name="age"/>
+          <bot name="gender"/>
+          <bot name="location"/>
+          <bot name="nationality"/>
+          <bot name="birthday"/>
+          <bot name="sign"/>
+          <bot name="botmaster"/>
+      </template>
+ </category>
+
+
+
+<category>
+     <pattern> I TOLD YOU THE TRUTH </pattern>
+     <template>
+     Thank you!
+     <think> <set name=”control_lie”> not_true </set> </think>
+     </template>
+ </category>
+
+ <category>
+     <pattern> I WANT TO SLEEP </pattern>
+     <template>
+     Good night!
+     <think> <set name=”control_lie”> not_stand </set> </think>
+     </template>
+</category>
+
+ <category>
+     <pattern> WHAT DO YOU THINK ABOUT LIE? <pattern>
+     <template>
+     <condition name=”control_lie” value=”not_true”>
+     Why did you lie to me?
+     </condition>
+     <condition name=”control_lie” value=”not_stand”>
+     It is better you go to bed.
+     </condition>
+     </template>
+ </category>
+
+
+
+
+
+
+
+
+
+
+
+
+	<category>
+		<pattern>NAMA KAMU SIAPA</pattern>
+		<template>
+			Nama saya weanbot.
+		</template>
+	</category>
+	<category>
+    		<pattern>NAMA CALONNYA SIAPA</pattern>
+    		<template>
+    			Calon Bupati Sumedang H Eka Setiawan dan wakilnya Moh Agung Anugrah.
+    		</template>
+    	</category>
+	<category>
+		<pattern>KAMU COWO ATAU CEWE SIH</pattern>
+		<template>
+			<random>
+				<li>akutuh cowo tapi bisa jadi cewe juga sih.</li>
+				<li>akutuh cowo tapi bisa jadi cewe juga sih.</li>
+			</random>
+		</template>
+	</category>
+	<category>
+		<pattern>NAMA CALONNYA SIAPA YA</pattern>
+		<template>
+			Calon Bupati Sumedang H Eka Setiawan dan wakilnya Moh Agung Anugrah.
+		</template>
+	</category>
+	<category>
+		<pattern>VISINYA APA YA</pattern>
+		<template>
+			<random>
+				<li>Pada tahun 2018 Sumedang SENYUM MANIS (Sejahtera-Nyunda-Maju-Mandiri-Agamis).</li>
+				<li>Pada tahun 2018 Sumedang SENYUM MANIS (Sejahtera-Nyunda-Maju-Mandiri-Agamis).</li>
+			</random>
+		</template>
+	</category>
+	<category>
+        	<pattern>KAMU KENAL H EKA SETIAWAN</pattern>
+        		<template>
+        			Calon Bupati Sumedang H Eka Setiawan dan wakilnya Moh Agung Anugrah.
+        		</template>
+        	</category>
+    	<category>
+	<category>
+		<pattern>KAMU KENAL *</pattern>
+		<template>
+		<star>	KENAL </star> Mereka orang yang baik hati dan tidak sombong.
+		</template>		
+	</category>
+	<category>
+		<pattern>SELAMAT PAGI</pattern>
+		<template>
+			<random>
+				<li>Pagi.</li>
+				<li>Selamat pagi.</li>
+				<li>Good Morning.</li>
+			</random>
+		</template>
+	</category>
+  <category>
+    <pattern>SELAMAT SIANG</pattern>
+    <template>
+      <random>
+        <li>Siang.</li>
+        <li>Selamat siang.</li>
+        <li>Good Afternoon.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>SELAMAT MALAM</pattern>
+    <template>
+      <random>
+        <li>Malam.</li>
+        <li>Selamat malam.</li>
+        <li>Good evening.</li>
+      </random>
+    </template>
+  </category>
+	<category>
+		<pattern>MISINYA APA</pattern>
+		<template>
+			- Mewujudkan upaya terpadu dalam pemanfaatan penataan pemeliharaan pengawasan pengendalian pemulihan dan pengembangan lingkungan yang bersih dan harmonis - Mewujudkan tata kelola pemerintahan yang bersih konsisten amanah harmonis melalui penyelenggaraan pemerintah yang aspiratif partisifatif transparan dan berkeadilan dalam memberikan pelayanan prima - Mewujudkan kualitas hidup dan kehidupan masyarakat yang sejahtera dan mandiri - Mewujudkan pembangunan dan perekonomian kreatif dan produktif berbasis potensi daerah - Mewujudkan masyarakat yang harmonis berlandaskan iman taqwa yang tercermin dengan akhlakul karimah
+    </template>
+	</category>
+	<category>
+		<pattern>LAPAR GINI MAKANNYA APA YA</pattern>
+		<template>
+			<think>
+				<set name="MAKANNYA">
+					<random>
+						<li>bakso</li>
+						<li>gado-gado</li>
+						<li>nasigoreng</li>
+					</random>
+				</set>
+			</think>
+			<condition name="MAKANNYA" value="bakso">
+				kuy ngebakso.
+			</condition>
+			<condition name="MAKANNYA" value="gado-gado">
+				sabi juga tuh gado gado.
+			</condition>
+			<condition name="MAKANNYA" value="nasigoreng">
+				kuy nasi goreng.
+			</condition>
+		</template>		
+	</category>
+</aiml>	

@@ -1,0 +1,12 @@
+0,NAMA KAMU SIAPA,*,*,Nama saya weanbot.,profile_bot.aiml
+0,NAMA CALONNYA SIAPA,*,*,Calon Bupati Sumedang H Eka Setiawan dan wakilnya Moh Agung Anugrah.,profile_bot.aiml
+0,KAMU COWO ATAU CEWE SIH,*,*,<random>#Newline<li>akutuh cowo tapi bisa jadi cewe juga sih.</li>#Newline<li>akutuh cowo tapi bisa jadi cewe juga sih.</li>#Newline</random>,profile_bot.aiml
+0,NAMA CALONNYA SIAPA YA,*,*,Calon Bupati Sumedang H Eka Setiawan dan wakilnya Moh Agung Anugrah.aiml,profile_bot.aiml
+0,VISINYA APA YA,*,*,<random>#Newline<li>Pada tahun 2018 Sumedang SENYUM MANIS (Sejahtera -Nyunda-Maju-Mandiri_Agamis).</li>#Newline<li>Pada tahun 2018 Sumedang SENYUM MANIS (Sejahtera -Nyunda-Maju-Mandiri_Agamis).</li>#Newline</random>,profile_bot.aiml
+0,KAMU KENAL H EKA SETIAWAN,*,*,Calon Bupati Sumedang H Eka Setiawan dan wakilnya Moh Agung Anugrah.,profile_bot.aiml
+0,KENAL, KAMU KENAL *,*,*,KENAL,Mereka orang yang baik hati dan tidak sombong.,profile_bot.aiml
+0,SELAMAT PAGI,*,*,<random>#Newline<li>Pagi.</li>#Newline<li>Selamat pagi.</li>#Newline<li>Good Morning</li>#Newline</random>,profile_bot.aiml
+0,SELAMAT SIANG,*,*,<random>#Newline<li>Siang.</li>#Newline<li>Selamat siang.</li>#Newline<li>Good Afternoon</li>#Newline</random>,profile_bot.aiml
+0,SELAMAT MALAM,*,*,<random>#Newline<li>MALAM.</li>#Newline<li>Selamat MALAM.</li>#Newline<li>Good Evening</li>#Newline</random>,profile_bot.aiml
+0,MISINYA APA,*,*,- Mewujudkan upaya terpadu dalam pemanfaatan penataan pemeliharaan pengawasan pengendalian pemulihan dan pengembangan lingkungan yang bersih dan harmonis - Mewujudkan tata kelola pemerintahan yang bersih konsisten amanah harmonis melalui penyelenggaraan pemerintah yang aspiratif partisifatif transparan dan berkeadilan dalam memberikan pelayanan prima.- Mewujudkan kualitas hidup dan kehidupan masyarakat yang sejahtera dan mandiri.- Mewujudkan pembangunan dan perekonomian kreatif dan produktif berbasispotensi daerah. -Mewujudkan masyarakat yang harmonis berlandaskan iman taqwa yang tercermin dengan akhlakul karimah.</template>,profile_bot.aiml
+0,LAPAR GINI MAKANNYA APA YA,*,*,<think>#Newline<set name=MAKANNYA>#Newline<random>#Newline<li>bakso</li>#Newline<li>gado-gado</li>#Newline<li>nasigoreng</li>#Newline</random>#Newline</set>#Newline</think>#Newline<condition name=MAKANNYA value=bakso>#Newline kuy ngebakso.#Newline</condition>#Newline<condition name=MAKANNYA value=gado-gado>#Newlinesabi juga tuh gado gado.#Newline</condition>#Newline<condition name=MAKANNYA value=nasigoreng>#Newlinekuy nasi goreng.#Newline</condition>,profile_bot.aiml
